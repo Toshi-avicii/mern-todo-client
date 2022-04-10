@@ -21,7 +21,7 @@ export const TodosContextProvider = (props) => {
 
     const createTodo = async(inputData) => {
         try { 
-          const response = await fetch('http://localhost:5000/api/v1/todos', {
+          const response = await fetch('https://mern-stacc-todo-app.herokuapp.com/api/v1/todos', {
             method: "POST",
             headers: {
               "Content-Type": "application/json"
@@ -39,7 +39,7 @@ export const TodosContextProvider = (props) => {
 
     const fetchAll = async() => {
         try {
-            const response = await fetch('http://localhost:5000/api/v1/todos');
+            const response = await fetch('https://mern-stacc-todo-app.herokuapp.com/api/v1/todos');
             const data = await response.json();
             setAppTodos(data);
             let notCompletedTodo = data.filter(item => item.completed !== true);
@@ -51,7 +51,7 @@ export const TodosContextProvider = (props) => {
 
     const fetchNotCompleted = async() => {
         try { 
-          const response = await fetch('http://localhost:5000/api/v1/todos');
+          const response = await fetch('https://mern-stacc-todo-app.herokuapp.com/api/v1/todos');
           const data = await response.json();
 
           let notCompletedTodos = data.filter(item => item.completed !== true);
@@ -66,7 +66,7 @@ export const TodosContextProvider = (props) => {
 
     const fetchCompleted = async() => {
         try { 
-          const response = await fetch('http://localhost:5000/api/v1/todos');
+          const response = await fetch('https://mern-stacc-todo-app.herokuapp.com/api/v1/todos');
           const data = await response.json();
 
           let completedTodos = data.filter(item => item.completed !== false);
@@ -79,7 +79,7 @@ export const TodosContextProvider = (props) => {
 
     const completeTodo = async(todoId) => {
         try { 
-            const response = await fetch(`http://localhost:5000/api/v1/todos/${todoId}`, {
+            const response = await fetch(`https://mern-stacc-todo-app.herokuapp.com/api/v1/todos/${todoId}`, {
               method: "PATCH",
               headers: {
                 "Content-Type": "application/json"
@@ -97,7 +97,7 @@ export const TodosContextProvider = (props) => {
 
     const incompleteTodo = async(todoId) => {
         try { 
-            const response = await fetch(`http://localhost:5000/api/v1/todos/${todoId}`, {
+            const response = await fetch(`https://mern-stacc-todo-app.herokuapp.com/api/v1/todos/${todoId}`, {
               method: "PATCH",
               headers: {
                 "Content-Type": "application/json"
@@ -115,7 +115,7 @@ export const TodosContextProvider = (props) => {
 
     const deleteTodos = async() => {
         try { 
-            const response = await fetch('http://localhost:5000/api/v1/todos', {
+            const response = await fetch('https://mern-stacc-todo-app.herokuapp.com/api/v1/todos', {
               method: "DELETE",
               headers: {
                 "Content-Type": "application/json"
