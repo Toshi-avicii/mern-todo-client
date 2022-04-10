@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+:root {
+  --bright-blue: hsl(220, 98%, 61%);
+  --check-bg: hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+
+  /* Light Theme colors */ 
+  --lm-very-light-gray: hsl(0, 0%, 98%);
+  --lm-very-light-grayish-blue: hsl(236, 33%, 92%);
+  --lm-light-grayish-blue: hsl(233, 11%, 84%);
+  --lm-dark-grayish-blue: hsl(236, 9%, 61%);
+  --lm-very-dark-grayish-blue: hsl(235, 19%, 35%);
+
+  /* Dark Theme colors */
+
+  --dm-very-dark-blue: hsl(235, 21%, 11%);
+  --dm-dark-desaturated-blue: hsl(235, 24%, 19%);
+  --dm-light-grayish-blue: hsl(234, 39%, 85%);
+  --dm-light-grayish-blue-hover: hsl(236, 33%, 92%);
+  --dm-dark-grayish-blue: hsl(234, 11%, 52%);
+  --dm-very-dark-grayish-blue-one: hsl(233, 14%, 35%);
+  --dm-very-dark-grayish-blue-two: hsl(237, 14%, 26%);
+
+  /* Font Size */
+  --font-size: 18px;
+  --font-weight: 400;
+  --font-weight-bold: 700;
+}
+
+.App {
+  position: relative;
+}
+
+.bg-box {
+  min-height: 40vh;
+  max-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-repeat: no-repeat;
+}
+
+.app-box {
+  min-width: 45vw;
+  max-width: 75vw;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box img {
+  cursor: pointer;
+}
+
+.box h1 {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 2.5rem;
+}
+
+form.add {
+  margin-top: 1.35rem;
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: var(--lm-very-light-gray);
+  border: none;
+  color: var(--lm-dark-grayish-blue);
+  display: flex;
+  box-shadow: 0px 0px 4px var(--lm-dark-grayish-blue);
+}
+
+form.add input {
+  width: 100%;
+  border: none;
+  height: inherit;
+  outline: none;
+  font-size:var(--font-size);
+  margin-left: 1rem;
+  color: var(--lm-very-dark-grayish-blue);
+}
+
+::placeholder {
+  color: var(--lm-dark-grayish-blue)
+}
+
+.todo-item {
+  width: 100%;
+}
+
+form.todo-item-form {
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: var(--lm-very-light-gray);
+  border: none;
+  color: var(--lm-dark-grayish-blue);
+  display: flex;
+  border-bottom: 1px solid var(--lm-very-light-grayish-blue);
+}
+
+.btn-set-complete {
+  border: none;
+  font-size: 12px;
+  margin-left: 1rem;
+  cursor: pointer;
+  padding: 0 0.5rem;
+}
+
+@media screen and (max-width: 576px) {
+  .todo-list {
+    min-width: 90vw;
+    max-width: 95vw;
+  }
+
+  .app-box {
+    min-width: 90vw;
+    max-width: 95vw;
+  }
+}
