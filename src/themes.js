@@ -5,7 +5,7 @@ export const lightTheme = {
     fontColor: 'hsl(235, 19%, 35%)',
     formColor: 'hsl(0, 0%, 98%)',
     boxShadow: '0px 0px 20px hsl(236, 33%, 92%), 0px 0px 20px hsl(236, 9%, 61%)',
-    backgroundImg: 'url("../public/bg-desktop-light.jpg")',
+    backgroundImg: 'url("../bg-desktop-light.jpg")',
 }
 
 export const darkTheme = {
@@ -15,7 +15,7 @@ export const darkTheme = {
     boxShadow: '0px 0px 20px hsl(235, 21%, 11%)',
     itemColor: 'hsl(0, 0%, 98%)',
     borderBottomColor: 'hsl(235, 21%, 11%)',
-    backgroundImg: 'url("../public/bg-desktop-dark.jpg")',
+    backgroundImg: 'url("../bg-desktop-dark.jpg")',
 }
 
 export const GlobalStyles = createGlobalStyle`

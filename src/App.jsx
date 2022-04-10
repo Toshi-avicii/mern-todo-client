@@ -1,8 +1,6 @@
 import { useState, useContext } from 'react';
 import './App.css'
 import styled from 'styled-components';
-import moonImg from './public/icon-moon.svg';
-import sunImg from './public/icon-sun.svg';
 import List from './components/List';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme, GlobalStyles } from './themes';
